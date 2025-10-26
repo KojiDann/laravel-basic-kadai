@@ -8,7 +8,18 @@
 </head>
 
 <body>
-    <h1>投稿一覧</h1>
+    <table>
+       @foreach($products as $product)
+           <tr>
+               <td>{{ $product->id }}</td>
+               <td>{{ $product->title }}</td>
+               <td>{{ $product->content }}</td>
+               <td>{{ $product->created_at }}</td>
+               <td>{{ $product->updated_at }}</td>
+           </tr>            
+       @endforeach 
+    </table>    
+
 </body>
 
 </html>
