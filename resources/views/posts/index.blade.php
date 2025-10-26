@@ -9,13 +9,13 @@
 
 <body>
     <table>
-       @foreach($products as $product)
+       @foreach($posts as $post)
            <tr>
-               <td>{{ $product->id }}</td>
-               <td>{{ $product->title }}</td>
-               <td>{{ $product->content }}</td>
-               <td>{{ $product->created_at }}</td>
-               <td>{{ $product->updated_at }}</td>
+               <td>{{ $post->id }}</td>
+               <td>{{ $post->title }}</td>
+               <td>{{ $post->content }}</td>
+               <td>{{ $post->created_at }}</td>
+               <td>{{ $post->updated_at }}</td>
            </tr>            
        @endforeach 
     </table>    
