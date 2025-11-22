@@ -22,13 +22,13 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
-        // バリデーション
+
         $validated = $request->validate([
             'title' => 'required|max:20',
             'content' => 'required|max:200',
         ]);
 
-        // データを保存
+
         DB::table('posts')->insert([
             'title' => $validated['title'],
             'content' => $validated['content'],
@@ -36,7 +36,7 @@ class PostController extends Controller
             'updated_at' => now(),
         ]);
 
-        // 投稿一覧ページにリダイレクト
+
         return redirect('/posts');
     }
 }
